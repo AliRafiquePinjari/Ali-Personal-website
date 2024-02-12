@@ -1,0 +1,318 @@
+body,
+html {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.backGroundImg {
+  background-image: url("https://cdn.pixabay.com/photo/2014/02/04/20/22/abstract-258339_1280.png");
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed; /* Fix background image */
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 58px;
+  width: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent black background for better readability */
+  color: #fff;
+  z-index: 1000; /* Ensure navbar stays on top */
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+.nav-links li a {
+  display: inline-block;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.nav-links li a:hover {
+  background-color: #555;
+}
+
+.logo {
+  float: left;
+  margin-left: 5em;
+}
+.nav-links {
+  float: right;
+}
+.intro {
+  margin: 100px auto;
+  text-align: center;
+}
+.intro h1 {
+  font-size: 150px;
+  margin-bottom: 8px;
+}
+.intro h2 {
+  margin-bottom: -20px;
+}
+.intro h4 {
+  margin-left: 10px; /* Adjust the margin for the "Web Developer" text */
+  font-size: 16px; /* Adjust the font size for consistency */
+  font-weight: 100;
+}
+
+.intro p i {
+  margin-top: 10px;
+  font-size: 45px;
+  padding: 5px;
+}
+.intro p i:hover{
+  transform: scale(1.8);
+}
+
+/* about section  */
+
+section {
+  margin-top: 2%;
+}
+
+/* sub heading for all */
+section .subhead {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  padding-top: 10%;
+  padding-bottom: 3%;
+}
+
+section .about h3 {
+  padding-top: 30px;
+}
+
+section .about p {
+  text-align: justify;
+}
+/* Button section  */
+
+section .button {
+  margin: 16px 0;
+  float: right;
+}
+
+section .button button {
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 400;
+  background: #555;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+section .button button:hover {
+  border-color: #555;
+  background-color: #fff;
+  color: #555;
+}
+
+section .about img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #111111;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+}
+
+/* Portfolio page specific styles */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Adjust minmax value as needed */
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%; /* Ensure the image fills the entire width of the card */
+  height: 250px;
+  display: block;
+}
+
+.card-content {
+  /* padding: 20px; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background color for pop-up */
+  padding: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.card:hover .card-content {
+  transform: translateY(0); /* Move card content upward on hover */
+}
+
+/* .card-content h3 {
+    margin-top: 0;
+}
+
+.card-content p {
+    margin-bottom: 0;
+} */
+
+/* Contact section specific styles */
+#contact {
+  padding: 40px 0;
+}
+
+.contact-info {
+  max-width: 600px;
+    margin: 0 auto;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items:center; 
+}
+
+.contact-info p{
+    margin-bottom: 2px;
+}
+
+.contact-info i {
+  color: #b7b4b4;
+  text-decoration: none;
+  font-size: xx-large;
+  padding: 5px;
+  
+}
+
+.contact-info i:hover {
+  color: rgb(253, 249, 249);
+  transform:scale(1.5);
+}
+
+footer{
+  margin-top: 8%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  );
+  color: #f7e9e9;
+}
+/* For mobile-sized devices */
+@media (max-width: 767px) {
+  /* Your mobile-specific styles here */
+  .logo {
+    float: left;
+    margin: 13px auto;
+}
+  .container {
+    width: 90%; /* Adjust container width for better mobile layout */
+  }
+
+  
+
+  .nav-links li {
+    display: none; /* Stack navigation links vertically */
+  }
+
+  
+
+  .logo {
+    float: none; /* Center the logo */
+    margin: 0 auto; /* Center the logo */
+  }
+
+  .intro h1 {
+    font-size: 75px; /* Adjust font size for better mobile readability */
+  }
+
+  .intro h2 {
+    font-size: 30px; /* Adjust font size for better mobile readability */
+  }
+
+  .intro h4 {
+    margin-left: 0; /* Center-align the Web Developer text */
+    font-size: 14px; /* Adjust font size for better mobile readability */
+  }
+  .contact-info p{
+    font-size: 15px;
+  }
+}
+
+/* Add media query for tablets and larger screens */
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px; /* Adjust max-width for tablets */
+  }
+
+  .nav-links {
+    float: right; /* Float navigation links to the right */
+    text-align: left; /* Reset text alignment */
+  }
+
+  .nav-links li {
+    display: inline; /* Display navigation links as inline elements */
+    margin-bottom: 0; /* Reset margin */
+  }
+
+  .nav-links li a {
+    padding: 20px; /* Reset padding */
+  }
+
+  .logo {
+    float: left; /* Float the logo to the left */
+    text-align: left; /* Reset text alignment */
+  }
+
+  .intro {
+    margin-top: 100px; /* Reset top margin */
+  }
+
+  .intro h1 {
+    font-size: 125px; /* Reset font size */
+  }
+
+  .intro h2 {
+    font-size: 30px; /* Reset font size */
+  }
+  
+}
